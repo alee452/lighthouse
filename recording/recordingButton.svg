@@ -1,0 +1,8 @@
+<svg class="recordingButton" width="517" height="517" viewBox="0 0 517 517" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="recordingButton">
+        <circle id="innerCircle" cx="259" cy="259" r="219.5" fill="#9DA3B0" stroke="#9DA3B0" />
+        <circle id="ring" cx="258.5" cy="258.5" r="249" stroke="#9DA3B0" stroke-width="3" />
+        <circle id="click" cx="258.5" cy="258.5" r="256.5" fill="transparent" stroke="transparent"
+            stroke-width="4" />
+    </g>
+</svg>

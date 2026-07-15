@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <img src="elements/background.svg" class="background">
+
+    <div class="sidebar">
+        <div class="headerSidebar">
+            <img id="pfp" src="sidebar/pfp.png">
+            <img id="sidebarIcon" src="sidebar/sidebarIcon.png">
+        </div>
+
+        <div class="sidebarWrapper">
+            <div class="sidebarRow">
+                <img class="sidebarIcons" src="sidebar/newChat.png">
+                <p class="rowText">New Chat</p>
+            </div>
+
+            <div class="sidebarRow">
+                <img class="sidebarIcons" src="sidebar/add.png">
+                <p class="rowText">Add New Client</p>
+            </div>
+
+            <div class="sidebarRow">
+                <img class="sidebarIcons" src="sidebar/edit.png">
+                <p class="rowText">Edit Client</p>
+            </div>
+
+            <div class="sidebarRow">
+                <img class="sidebarIcons" src="sidebar/list.png">
+                <p class="rowText">Client List</p>
+            </div>
+
+            <div class="warpperIndent">
+                <div class="sidebarRow">
+                    <img class="sidebarIcons" src="sidebar/clientpfp.png">
+                    <p class="rowText">Client Name</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="recordingSection">
+        <div class="recordingControls">
+            <svg class="recordingButton" width="517" height="517" viewBox="0 0 517 517" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="recordingButton">
+                    <circle id="innerCircle" cx="259" cy="259" r="219.5" />
+                    <circle id="ring" cx="258.5" cy="258.5" r="249" stroke-width="3" />
+                    <circle id="click" cx="258.5" cy="258.5" r="256.5" fill="transparent" stroke="transparent"
+                        stroke-width="4" />
+                </g>
+            </svg>
+
+            <!--play pause buttons-->
+            <svg id="playSVG" class="recordingButton hidden" width="525" height="525" viewBox="0 0 525 525" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="playButton">
+                    <circle id="buttonPlay" cx="263" cy="263" r="245" stroke="#D9D9D9" stroke-width="20" />
+                    <path id="Vector1" d="M214 182L215 348" stroke="#D9D9D9" stroke-width="20" stroke-linecap="round" />
+                    <path id="Vector2" d="M326 182L327 348" stroke="#D9D9D9" stroke-width="20" stroke-linecap="round" />
+                    <circle id="clickPlay" cx="262.5" cy="262.5" r="252.5" fill="transparent" stroke="transparent"
+                        stroke-width="20" />
+                </g>
+            </svg>
+
+            <svg id="pauseSVG" class="recordingButton" width="525" height="525" viewBox="0 0 525 525" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="pauseButton">
+                    <circle id="ringPause" cx="263" cy="263" r="245" stroke="#D9D9D9" stroke-width="20" />
+                    <path id="pause"
+                        d="M366 254.34C372.667 258.189 372.667 267.811 366 271.66L219 356.531C212.333 360.38 204 355.568 204 347.87L204 178.13C204 170.432 212.333 165.62 219 169.469L366 254.34Z"
+                        fill="#D9D9D9" />
+                    <circle id="clickPause" cx="262.5" cy="262.5" r="252.5" fill="transparent" stroke="transparent"
+                        stroke-width="20" />
+                </g>
+            </svg>
+            <!--play pause buttons-->
+
+            <svg class="recordingButton" width="1636" height="2020" viewBox="0 0 1636 2020" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="deleteButton">
+                    <path id="trash"
+                        d="M598.5 221H142C105.333 221 31.9 242.3 31.5 327.5C31.1 412.7 105 428 142 425H1526.5C1554.17 429.833 1609.5 417.6 1609.5 330C1609.5 242.4 1554.17 220.833 1526.5 221H1049M1526.5 425C1476.17 871.333 1372.2 1785.5 1359 1871.5C1345.8 1957.5 1268.83 1985.33 1232 1988.5C1001.33 1988.83 516.8 1989.3 424 1988.5C331.2 1987.7 292.667 1906.5 285 1866L142 425M1190.5 697L1102 1712M823.5 697V1712M459.5 697L550.5 1712M598.5 221C594.167 168 605.8 61.8 687 61C768.2 60.2 906.833 60.6667 966 61C1018 66.5 1048.2 100.2 1049 221M598.5 221H1049"
+                        stroke-width="40" stroke-linecap="round" />
+                    <rect id="clickTrash" x="10" y="10" width="1616" height="2000" rx="328" fill="transparent"
+                        stroke="transparent" stroke-width="20" />
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <div class="chatSection">
+
+        <div class="messages" id="messages">
+            <div class="messageBot">
+                Hello! How can I help?
+            </div>
+
+            <div class="messageUserWrapper">
+                <div class="messageUser">
+                    lksajflsakjfl;sadfjl;sadfjkls;adjfkl;sajflds;kaasdfjkldsafjsl;adkfjlskda;fjl;ksdajflsa;jflkdsjafl;dsaasdfjksaldfjsla;dkjfl;sakjflksafjl;asdkj
+                </div>
+            </div>
+        </div>
+
+
+        <div class="input-area">
+            <input id="messageInput" placeholder="Type a message...">
+            <button id="chatButton" onclick="sendMessage()">
+                <svg class="sendButton" width="474" height="474" viewBox="0 0 474 474" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path id="Subtract"
+                        d="M237 0C367.891 0 474 106.109 474 237C474 367.891 367.891 474 237 474C106.109 474 0 367.891 0 237C0 106.109 106.109 0 237 0ZM244.071 122.929C240.166 119.023 233.834 119.023 229.929 122.929L166.289 186.568C162.384 190.474 162.384 196.806 166.289 200.711C170.194 204.616 176.526 204.616 180.432 200.711L227 154.143V367C227 372.523 231.477 377 237 377C242.523 377 247 372.523 247 367V154.143L293.568 200.711C297.474 204.616 303.806 204.616 307.711 200.711C311.616 196.806 311.616 190.474 307.711 186.568L244.071 122.929Z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
