@@ -81,3 +81,15 @@ document.getElementById("clickPause").addEventListener("click", () => {
     Vector1.style.stroke = "#6B8BA4";
     Vector2.style.stroke = "#6B8BA4";
 });
+
+
+
+//sidebar buttons
+const newChatButtong = document.getElementById("newChatButton");
+const newChatID = document.getElementById("newChatID");
+const messageSectionID = document.getElementById("messageSectionID");
+
+newChatButtong.addEventListener("click", () => {
+    newChatID.style.display = "flex";
+    messageSectionID.style.display = "none";
+});

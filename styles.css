@@ -68,7 +68,7 @@ html {
     gap: 1vw;
 }
 
-.chatSection {
+.overlayForImage {
     width: 75%;
     height: 85vh;
     position: fixed;
@@ -81,10 +81,119 @@ html {
     background-color: #2c2e331e;
 }
 
+.chatSectionMessages {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.newChatTitle {
+    color: white;
+    font-size: 5vw;
+    margin-bottom: 0;
+}
+
+.newChat {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+
+
+.input-areaNew {
+    width: 95%;
+    height: 6vh;
+    border: white 2px solid;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    transition: border 0.5s ease;
+
+    margin-bottom: 3vh;
+}
+
+.input-areaNew:hover {
+    border-color: white;
+}
+
+.input-areaNew:has(#messageInput:focus) {
+    border-color: white;
+}
+
+#messageInputNew {
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    margin-left: 0.7vw;
+    font-size: 1vw;
+    color: white;
+}
+
+#messageInputNew::placeholder {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.input-area:hover #messageInputNew::placeholder,
+.input-area:has(#messageInputNew:focus) #messageInputNew::placeholder {
+    color: white;
+}
+
+#chatButtonNew {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: transparent;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: 0.3vw;
+}
+
+#chatButtonNew svg {
+    width: 100%;
+    height: 100%;
+}
+
+#SubtractNew {
+    fill: white;
+    transition: fill 0.5s ease;
+    cursor: pointer;
+}
+
+.sendButtonNew:hover {
+    cursor: pointer;
+}
+
+.sendButtonNew:hover #SubtractNew {
+    cursor: pointer;
+    fill: white;
+}
+
 .input-area {
     width: 95%;
     height: 6vh;
-    border: #9EA3AE 2px solid;
+    border: white 2px solid;
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
