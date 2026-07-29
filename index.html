@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lighthouse App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -17,31 +17,44 @@
             <img id="sidebarIcon" src="sidebar/sidebarIcon.png">
         </div>
 
-        <div class="sidebarWrapper" id="newChatButton">
-            <div class="sidebarRow">
-                <img class="sidebarIcons" src="sidebar/newChat.png">
-                <p class="rowText">New Chat</p>
-            </div>
+        <div class="sidebarWrapper">
+            <div class="movingStuff" id="movingStuff">
+                <div class="sidebarRow" id="newChatButton">
+                    <img class="sidebarIcons" src="sidebar/newChat.png">
+                    <p class="rowText">New Chat</p>
+                </div>
 
-            <div class="sidebarRow">
-                <img class="sidebarIcons" src="sidebar/add.png">
-                <p class="rowText">Add New Client</p>
-            </div>
-
-            <div class="sidebarRow">
-                <img class="sidebarIcons" src="sidebar/edit.png">
-                <p class="rowText">Edit Client</p>
-            </div>
-
-            <div class="sidebarRow">
-                <img class="sidebarIcons" src="sidebar/list.png">
-                <p class="rowText">Client List</p>
-            </div>
-
-            <div class="warpperIndent">
                 <div class="sidebarRow">
-                    <img class="sidebarIcons" src="sidebar/clientpfp.png">
-                    <p class="rowText">Client Name</p>
+                    <img class="sidebarIcons" src="sidebar/add.png">
+                    <p class="rowText">Add New Client</p>
+                </div>
+
+                <div class="sidebarRow">
+                    <img class="sidebarIcons" src="sidebar/edit.png">
+                    <p class="rowText">Edit Client</p>
+                </div>
+
+                <div class="sidebarRow">
+                    <img class="sidebarIcons" src="sidebar/list.png">
+                    <p class="rowText">Client List</p>
+                </div>
+
+                <div class="wrapperIndent" id="clientName">
+                    <div class="sidebarRow">
+                        <img class="sidebarIcons" src="sidebar/clientpfp.png">
+                        <p class="rowText">Client Name</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="clientStuff" id="clientStuff">
+                <div class="sidebarRow">
+                    <p class="rowText">AI Chats</p>
+                </div>
+                <div class="sidebarRow">
+                    <p class="rowText">Session Transcript</p>
                 </div>
             </div>
         </div>
@@ -139,6 +152,42 @@
                     </svg>
                 </button>
             </div>
+        </div>
+
+
+        <div class="pfpSettings" id="pfpSettings">
+            <p class="pfpTitle">Profile Settings</p>
+
+
+            <p class="pfpSubtitle">Profile Photo</p>
+
+
+             <p class="pfpSubtitle">Full Name</p>
+
+
+              <p class="pfpSubtitle">Timezone</p>
+
+              <p class="pfpSubtitle">Langauge</p>
+
+              <p class="pfpSubtitle">Headline</p>
+
+              <p class="pfpSubtitle">Bio</p>
+
+              <p class="pfpSubtitle">Gender</p>
+
+              <p class="pfpSubtitle">Birthday</p>
+
+              <p class="pfpSubtitle">Profession</p>
+              
+              <p class="pfpSubtitle">Spouse Name</p>
+
+              <p class="pfpSubtitle">Therapist Sharing</p>
+
+
+              <p class="pfpSubtitle">Therapist Email</p>
+
+              <p class="pfpSubtitle">Phone Number</p>
+              
         </div>
 
     </div>

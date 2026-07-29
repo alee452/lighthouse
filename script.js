@@ -89,7 +89,30 @@ const newChatButtong = document.getElementById("newChatButton");
 const newChatID = document.getElementById("newChatID");
 const messageSectionID = document.getElementById("messageSectionID");
 
+const pfp = document.getElementById("pfp");
+const pfpSettings = document.getElementById("pfpSettings");
+
+
 newChatButtong.addEventListener("click", () => {
     newChatID.style.display = "flex";
     messageSectionID.style.display = "none";
+    pfpSettings.style.display = "none";
+});
+
+
+pfp.addEventListener("click", () => {
+    newChatID.style.display = "none";
+    messageSectionID.style.display = "none";
+    pfpSettings.style.display = "flex";
+});
+
+
+const clientName = document.getElementById("clientName");
+const movingStuff = document.getElementById("movingStuff");
+const clientStuff = document.getElementById('clientStuff')
+
+
+clientName.addEventListener('click', function () {
+    movingStuff.classList.add('left');
+    clientStuff.classList.add('in');
 });
