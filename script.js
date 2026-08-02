@@ -124,3 +124,12 @@ sidebarBack.addEventListener('click', function () {
     document.getElementById('movingStuff').classList.remove('left');
     document.getElementById('clientStuff').classList.remove('in');
 });
+
+document.getElementById('sidebarIcon').addEventListener('click', function () {
+    const sidebar = document.querySelector('.sidebar');
+    const isCollapsed = sidebar.classList.toggle('collapsed');
+    document.documentElement.style.setProperty(
+        '--sidebar-width',
+        isCollapsed ? '80px' : '25%'
+    );
+});

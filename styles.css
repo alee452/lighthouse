@@ -33,7 +33,7 @@ html {
 .sidebar {
     position: fixed;
     background-color: #2C2E33;
-    width: 25%;
+    width: var(--sidebar-width);
     height: 100vh;
     top: 0;
     left: 0;
@@ -42,10 +42,11 @@ html {
 
     display: flex;
     flex-direction: column;
+    transition: width 0.3s ease; 
 }
 
 .recordingSection {
-    width: 75%;
+    width: calc(100% - var(--sidebar-width));
     height: 15vh;
     position: fixed;
     bottom: 0;
@@ -58,6 +59,7 @@ html {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    transition: width 0.3s ease; 
 }
 
 .recordingControls {
@@ -69,7 +71,7 @@ html {
 }
 
 .overlayForImage {
-    width: 75%;
+    width: calc(100% - var(--sidebar-width));
     height: 85vh;
     position: fixed;
     top: 0;
@@ -79,6 +81,7 @@ html {
     align-items: center;
     justify-content: end;
     background-color: #2c2e331e;
+    transition: width 0.3s ease; 
 }
 
 .chatSectionMessages {
@@ -500,4 +503,48 @@ html {
 .sidebarBack {
     width: 100%;
     height: auto;
+}
+
+
+.sidebar.collapsed {
+    width: 4.7vw;
+}
+
+.sidebar.collapsed .rowText,
+.sidebar.collapsed .newChatTitle {
+    display: none;
+}
+
+.sidebar.collapsed .sidebarRow,
+.sidebar.collapsed .smallerSidebarRow {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sidebar.collapsed .wrapperIndent {
+    padding-left: 0;
+}
+
+.sidebar.collapsed .headerSidebar {
+    justify-content: center;
+    gap: 1vh;
+}
+
+.sidebar.collapsed #pfp {
+    display: none;
+}
+
+.sidebar.collapsed .sidebarWrapper {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+:root {
+    --sidebar-width: 25%;
+}
+
+
+.sidebar.collapsed .wrapperIndent {
+    display: none;
 }
