@@ -474,3 +474,30 @@ html {
     display: none;
     overflow-y: scroll;
 }
+
+
+.smallerSidebarRow {
+    width: 13%;
+    height: 5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5vw;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.1s ease;
+}
+
+.smallerSidebarRow:hover {
+    background-color: #6b6f7ab0;
+}
+
+.sidebarBack {
+    width: 100%;
+    height: auto;
+}

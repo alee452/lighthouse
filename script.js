@@ -116,3 +116,11 @@ clientName.addEventListener('click', function () {
     movingStuff.classList.add('left');
     clientStuff.classList.add('in');
 });
+
+
+const sidebarBack = document.getElementById("sidebarBack");
+
+sidebarBack.addEventListener('click', function () {
+    document.getElementById('movingStuff').classList.remove('left');
+    document.getElementById('clientStuff').classList.remove('in');
+});
