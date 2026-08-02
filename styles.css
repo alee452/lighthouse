@@ -548,3 +548,145 @@ html {
 .sidebar.collapsed .wrapperIndent {
     display: none;
 }
+
+
+
+.pfpSettings {
+    width: 100%;
+    height: 100%;
+    padding: 4vh 3vw;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    overflow-y: scroll;
+    gap: 1vh;
+    box-sizing: border-box;
+}
+
+.pfpHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1vh;
+}
+
+.pfpHeaderLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+}
+
+.pfpTitle {
+    font-size: 2vw;
+    margin: 0;
+}
+
+.pfpButtonsRow {
+    display: flex;
+    gap: 1vw;
+}
+
+.pfpButton {
+    padding: 0.8vh 1.5vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-family: canvasans;
+    font-size: 0.9vw;
+    transition: background-color 0.2s ease;
+}
+
+.pfpButton:hover {
+    background-color: #6b6f7ab0;
+}
+
+.pfpButton.disabled {
+    border-color: #9EA3AE;
+    color: #9EA3AE;
+    cursor: not-allowed;
+    background: transparent;
+}
+
+.pfpAvatarIcon {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.pfpAvatarIcon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.pfpSubtitle {
+    margin: 0;
+    margin-top: 1.5vh;
+    font-size: 1vw;
+}
+
+.pfpField {
+    width: 100%;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-family: canvasans;
+    font-size: 1vw;
+    padding: 1.2vh 1vw;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.pfpField::placeholder {
+    color: #9ea3aecb;
+}
+
+textarea.pfpField {
+    resize: none;
+    height: 8vh;
+}
+
+select.pfpField {
+    appearance: none;
+    cursor: pointer;
+}
+
+.pfpCheckboxRow {
+    display: flex;
+    gap: 0.8vw;
+    margin-top: 0.5vh;
+}
+
+.pfpCheckbox {
+    width: 2vw;
+    height: 2vw;
+    min-width: 24px;
+    min-height: 24px;
+    border: 1px solid white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.pfpCheckbox.checked {
+    background: white;
+}
+
+.pfpCheckbox svg {
+    display: none;
+}
+
+.pfpCheckbox.checked svg {
+    display: block;
+}

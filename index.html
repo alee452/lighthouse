@@ -5,6 +5,7 @@
 <!--to do: 
 1. finish pfp settings and apply it to edit client?
 1A. Figure out what to do abt edit and add client
+1B. Refine pfp settings
 2. Soundwave and time for recording controls for bottom of screen
 3. add collapse function for client name, ai chat, and recording sessions
 4. make the new chat layout look better-->
@@ -167,38 +168,71 @@
 
 
         <div class="pfpSettings" id="pfpSettings">
-            <p class="pfpTitle">Profile Settings</p>
+            <div class="pfpHeader">
+                <div class="pfpHeaderLeft">
+                    <p class="pfpTitle">Profile Photo</p>
+                    <div class="pfpButtonsRow">
+                        <button class="pfpButton">Change</button>
+                        <button class="pfpButton disabled" disabled>Edit</button>
+                    </div>
+                </div>
+                <div class="pfpAvatarIcon">
+                    <img src="sidebar/pfp.png" alt="Profile">
+                </div>
+            </div>
 
+            <p class="pfpSubtitle">Full Name</p>
+            <input class="pfpField" type="text" placeholder="Julian Montgomery">
 
-            <p class="pfpSubtitle">Profile Photo</p>
+            <p class="pfpSubtitle">Timezone</p>
+            <select class="pfpField">
+                <option value=""></option>
+            </select>
 
+            <p class="pfpSubtitle">Language</p>
+            <select class="pfpField">
+                <option>English</option>
+            </select>
 
-             <p class="pfpSubtitle">Full Name</p>
+            <p class="pfpSubtitle">Headline</p>
+            <input class="pfpField" type="text">
 
+            <p class="pfpSubtitle">Bio</p>
+            <textarea class="pfpField"></textarea>
 
-              <p class="pfpSubtitle">Timezone</p>
+            <p class="pfpSubtitle">Gender</p>
+            <select class="pfpField">
+                <option value=""></option>
+            </select>
 
-              <p class="pfpSubtitle">Langauge</p>
+            <p class="pfpSubtitle">Birthday</p>
+            <input class="pfpField" type="date">
 
-              <p class="pfpSubtitle">Headline</p>
+            <p class="pfpSubtitle">Profession</p>
+            <input class="pfpField" type="text">
 
-              <p class="pfpSubtitle">Bio</p>
+            <p class="pfpSubtitle">Spouse Name</p>
+            <input class="pfpField" type="text">
 
-              <p class="pfpSubtitle">Gender</p>
+            <p class="pfpSubtitle">Therapist Sharing</p>
+            <div class="pfpCheckboxRow">
+                <div class="pfpCheckbox" id="therapistShareOff"></div>
+                <div class="pfpCheckbox checked" id="therapistShareOn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 12l5 5L20 6" stroke="#2C2E33" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
 
-              <p class="pfpSubtitle">Birthday</p>
+            <p class="pfpSubtitle">Therapist Name</p>
+            <input class="pfpField" type="text">
 
-              <p class="pfpSubtitle">Profession</p>
-              
-              <p class="pfpSubtitle">Spouse Name</p>
+            <p class="pfpSubtitle">Therapist Email</p>
+            <input class="pfpField" type="email">
 
-              <p class="pfpSubtitle">Therapist Sharing</p>
-
-
-              <p class="pfpSubtitle">Therapist Email</p>
-
-              <p class="pfpSubtitle">Phone Number</p>
-              
+            <p class="pfpSubtitle">Phone Number</p>
+            <input class="pfpField" type="tel">
         </div>
 
     </div>
