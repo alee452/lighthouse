@@ -651,8 +651,9 @@ html {
 }
 
 textarea.pfpField {
-    resize: none;
-    height: 8vh;
+    resize: vertical;
+    min-height: 17vh;
+    line-height: 1.4;
 }
 
 select.pfpField {
