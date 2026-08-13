@@ -133,3 +133,15 @@ document.getElementById('sidebarIcon').addEventListener('click', function () {
         isCollapsed ? '80px' : '25%'
     );
 });
+
+const therapistBoxes = [
+    document.getElementById('therapistShareOff'),
+    document.getElementById('therapistShareOn')
+];
+
+therapistBoxes.forEach(box => {
+    box.addEventListener('click', function () {
+        therapistBoxes.forEach(b => b.classList.remove('checked'));
+        this.classList.add('checked');
+    });
+});

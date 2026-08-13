@@ -662,8 +662,21 @@ select.pfpField {
 
 .pfpCheckboxRow {
     display: flex;
-    gap: 0.8vw;
+    flex-direction: column;
+    gap: 1vh;
     margin-top: 0.5vh;
+}
+
+.pfpCheckboxOption {
+    display: flex;
+    align-items: center;
+    gap: 0.6vw;
+    cursor: pointer;
+}
+
+.pfpCheckboxLabel {
+    margin: 0;
+    font-size: 1vw;
 }
 
 .pfpCheckbox {
