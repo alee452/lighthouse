@@ -145,3 +145,25 @@ therapistBoxes.forEach(box => {
         this.classList.add('checked');
     });
 });
+
+
+
+
+
+
+
+function toggleTheme() {
+    document.body.classList.toggle('light-mode');
+    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+}
+ 
+document.addEventListener('DOMContentLoaded', function () {
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-mode');
+    }
+});
+
+
+document.getElementById('pfp')?.addEventListener('click', openPfpSettings);
+document.getElementById('sidebarIcon')?.addEventListener('click', toggleSidebar);
+document.getElementById('newChatButton')?.addEventListener('click', showNewChat);

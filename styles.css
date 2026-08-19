@@ -3,6 +3,56 @@
     src: url('fonts/CanvaSans-Regular.otf') format('opentype');
 }
 
+:root {
+    --sidebar-width: 25%;
+
+    /* ---- Theme colors (dark = default) ---- */
+    --color-bg: #2C2E33;
+    --color-bg-elevated: #2C2E33;
+    --color-text: #ffffff;
+    --color-text-muted: #9EA3AE;
+    --color-border: #9EA3AE;
+    --color-border-strong: #ffffff;
+    --color-placeholder: #9ea3aecb;
+    --color-placeholder-hover: rgba(255, 255, 255, 0.795);
+    --color-icon: #9DA3B0;
+    --color-icon-hover: #ffffff;
+    --color-hover-bg: #6b6f7ab0;
+    --color-overlay: #2c2e331e;
+    --color-send-icon: #9EA3AE;
+    --color-send-icon-hover: #ffffff;
+    --color-message-user-bg: #2C2E33;
+    --color-pause: #D9D9D9;
+    --color-checkbox-check: #2C2E33;
+}
+
+body.light-mode {
+    --color-bg: #F5F5F7;
+    --color-bg-elevated: #FFFFFF;
+    --color-text: #2C2E33;
+    --color-text-muted: #6B6F7A;
+    --color-border: #616161;
+    --color-border-strong: #2C2E33;
+    --color-placeholder: #6b6f7acb;
+    --color-placeholder-hover: rgba(44, 46, 51, 0.795);
+    --color-icon: #6B6F7A;
+    --color-icon-hover: #2C2E33;
+    --color-hover-bg: #E4E6EA;
+    --color-overlay: #f5f5f71e;
+    --color-send-icon: #6B6F7A;
+    --color-send-icon-hover: #2C2E33;
+    --color-message-user-bg: #E9EAED;
+    --color-pause: #6B6F7A;
+    --color-checkbox-check: #ffffff;
+}
+
+
+.sidebarIcons path {
+    fill: var(--color-text);
+    transition: fill 0.2s ease;
+}
+
+
 
 * {
     box-sizing: border-box;
@@ -15,8 +65,9 @@ html {
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: #2C2E33;
-    color: white;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .background {
@@ -32,17 +83,17 @@ html {
 
 .sidebar {
     position: fixed;
-    background-color: #2C2E33;
+    background-color: var(--color-bg);
     width: var(--sidebar-width);
     height: 100vh;
     top: 0;
     left: 0;
     z-index: 2;
-    border-right: #9EA3AE 2px solid;
+    border-right: var(--color-border) 2px solid;
 
     display: flex;
     flex-direction: column;
-    transition: width 0.3s ease; 
+    transition: width 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .recordingSection {
@@ -52,14 +103,14 @@ html {
     bottom: 0;
     right: 0;
     z-index: 1;
-    background-color: #2C2E33;
-    border-top: #9EA3AE 2px solid;
+    background-color: var(--color-bg);
+    border-top: var(--color-border) 2px solid;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: width 0.3s ease; 
+    transition: width 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .recordingControls {
@@ -80,8 +131,8 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    background-color: #2c2e331e;
-    transition: width 0.3s ease; 
+    background-color: var(--color-overlay);
+    transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .chatSectionMessages {
@@ -124,7 +175,7 @@ html {
     justify-content: space-between;
     position: relative;
     align-items: center;
-    transition: border 0.5s ease;
+    transition: border-color 0.5s ease;
 
     margin-bottom: 3vh;
 }
@@ -150,13 +201,13 @@ html {
 }
 
 #messageInputNew::placeholder {
-    color: white;
+    color: #9ea3aecb;
     transition: color 0.3s ease;
 }
 
 .input-area:hover #messageInputNew::placeholder,
 .input-area:has(#messageInputNew:focus) #messageInputNew::placeholder {
-    color: white;
+    color: rgba(255, 255, 255, 0.795);
 }
 
 #chatButtonNew {
@@ -196,13 +247,13 @@ html {
 .input-area {
     width: 95%;
     height: 6vh;
-    border: white 2px solid;
+    border: #ffffff 2px solid;
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
     position: relative;
     align-items: center;
-    transition: border 0.5s ease;
+    transition: border-color 0.5s ease;
 
     margin-bottom: 3vh;
 }
@@ -212,7 +263,7 @@ html {
 }
 
 .input-area:has(#messageInput:focus) {
-    border-color: white;
+    border-color: var(white);
 }
 
 #messageInput {
@@ -224,7 +275,7 @@ html {
     outline: none;
     margin-left: 0.7vw;
     font-size: 1vw;
-    color: white;
+    color: #ffffff;
 }
 
 #messageInput::placeholder {
@@ -274,20 +325,20 @@ html {
 .messageBot {
     text-align: left;
     width: 100%;
-    color: white;
+    color: var(--color-text);
     display: flex;
 }
 
 .messageUserWrapper {
     text-align: right;
     width: 100%;
-    color: white;
+    color: var(--color-text);
     display: flex;
     justify-content: end;
 }
 
 .messageUser {
-    background-color: #2C2E33;
+    background-color: var(--color-message-user-bg);
     padding-left: 1.5vw;
     padding-right: 1.5vw;
     padding-top: 2vh;
@@ -297,6 +348,7 @@ html {
     overflow-wrap: break-word;
     word-wrap: break-word;
     white-space: normal;
+    transition: background-color 0.3s ease;
 }
 
 .messages {
@@ -307,6 +359,7 @@ html {
 .headerSidebar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 7vh;
     padding-top: 2vh;
@@ -314,12 +367,16 @@ html {
     padding-right: 1vw;
     padding-left: 1vw;
     position: relative;
+    gap: 0.6vw;
 }
 
-#pfp,
+#pfp {
+    height: 90%;
+    width: auto;
+    cursor: pointer;
+}
 #sidebarIcon {
-    object-fit: contain;
-    height: 100%;
+    height: 85%;
     width: auto;
     cursor: pointer;
 }
@@ -353,12 +410,13 @@ html {
 
 .sidebarRow:hover,
 .sidebarRowIndent:hover {
-    background-color: #6b6f7ab0;
+    background-color: var(--color-hover-bg);
 }
 
 .sidebarIcons {
     width: auto;
     height: 80%;
+    padding: 0.1px;
 }
 
 .sidebarWrapper {
@@ -381,13 +439,13 @@ html {
 }
 
 #innerCircle {
-    fill: #9DA3B0;
-    stroke: #9DA3B0;
+    fill: var(--color-icon);
+    stroke: var(--color-icon);
     transition: stroke 0.2s ease, fill 0.2s ease;
 }
 
 #ring {
-    stroke: #9DA3B0;
+    stroke: var(--color-icon);
     transition: stroke 0.2s ease;
 }
 
@@ -397,13 +455,13 @@ html {
 }
 
 #buttonPlay {
-    stroke: #9DA3B0;
+    stroke: var(--color-icon);
     transition: stroke 0.2s ease;
 }
 
 #Vector1,
 #Vector2 {
-    stroke: #9DA3B0;
+    stroke: var(--color-icon);
     transition: stroke 0.2s ease;
 }
 
@@ -412,7 +470,7 @@ html {
 }
 
 #trash {
-    stroke: #9DA3B0;
+    stroke: var(--color-icon);
     transition: stroke 0.2s ease;
 }
 
@@ -421,11 +479,17 @@ html {
 }
 
 #ringPause {
-    stroke: #9DA3B0;
+    stroke: var(--color-icon);
 }
 
 #pause {
-    fill: #9DA3B0;
+    fill: var(--color-icon);
+}
+
+/* Client name icon (converted from PNG to SVG) */
+#Vector {
+    fill: var(--color-text);
+    transition: fill 0.2s ease;
 }
 
 
@@ -497,7 +561,7 @@ html {
 }
 
 .smallerSidebarRow:hover {
-    background-color: #6b6f7ab0;
+    background-color: var(--color-hover-bg);
 }
 
 .sidebarBack {
@@ -539,11 +603,6 @@ html {
     padding-right: 0;
     padding-left: 0;
 }
-
-:root {
-    --sidebar-width: 25%;
-}
-
 
 .sidebar.collapsed .wrapperIndent {
     display: none;
@@ -590,23 +649,23 @@ html {
 
 .pfpButton {
     padding: 0.8vh 1.5vw;
-    border: 1px solid white;
+    border: 1px solid var(--color-border-strong);
     border-radius: 10px;
     background: transparent;
-    color: white;
+    color: var(--color-text);
     cursor: pointer;
     font-family: canvasans;
     font-size: 0.9vw;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .pfpButton:hover {
-    background-color: #6b6f7ab0;
+    background-color: var(--color-hover-bg);
 }
 
 .pfpButton.disabled {
-    border-color: #9EA3AE;
-    color: #9EA3AE;
+    border-color: var(--color-text-muted);
+    color: var(--color-text-muted);
     cursor: not-allowed;
     background: transparent;
 }
@@ -636,18 +695,19 @@ html {
 .pfpField {
     width: 100%;
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid var(--color-border-strong);
     border-radius: 10px;
-    color: white;
+    color: var(--color-text);
     font-family: canvasans;
     font-size: 1vw;
     padding: 1.2vh 1vw;
     outline: none;
     box-sizing: border-box;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .pfpField::placeholder {
-    color: #9ea3aecb;
+    color: var(--color-placeholder);
 }
 
 textarea.pfpField {
@@ -685,7 +745,7 @@ select.pfpField {
     height: 2vw;
     min-width: 24px;
     min-height: 24px;
-    border: 1px solid white;
+    border: 1px solid var(--color-border-strong);
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -694,7 +754,7 @@ select.pfpField {
 }
 
 .pfpCheckbox.checked {
-    background: white;
+    background: var(--color-border-strong);
 }
 
 .pfpCheckbox svg {
@@ -703,4 +763,73 @@ select.pfpField {
 
 .pfpCheckbox.checked svg {
     display: block;
+}
+
+/* ---- Theme toggle switch ---- */
+.themeToggle {
+    width: 44px;
+    height: 24px;
+    min-width: 44px;
+    border-radius: 20px;
+    background-color: var(--color-hover-bg);
+    border: 1px solid var(--color-border);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.themeToggleKnob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--color-text);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+body.light-mode .themeToggleKnob {
+    transform: translateX(20px);
+}
+
+.sidebar.collapsed .themeToggle {
+    display: none;
+}
+
+/* ---- Light/dark specific image assets ---- */
+/* Default (dark theme) state: show the -darkmode asset, hide the light one. */
+.themeIcon-light {
+    display: none;
+}
+
+.themeIcon-dark {
+    display: inline-block;
+}
+
+body.light-mode .themeIcon-light {
+    display: inline-block;
+}
+
+body.light-mode .themeIcon-dark {
+    display: none;
+}
+
+
+
+
+#backArrow {
+    fill: var(--color-text);
+    transition: fill 0.2s ease;
+}
+
+#sidebarIcon path {
+    fill: var(--color-icon);
+    transition: fill 0.2s ease;
+}
+
+
+.pfpCheckbox svg path {
+    stroke: var(--color-checkbox-check);
 }
